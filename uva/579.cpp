@@ -6,6 +6,7 @@ using namespace std;
 #define endl '\n'
 #define min(x, y) ((x) < (y)) ? (x) : (y)
 #define max(x, y) ((x) > (y)) ? (x) : (y)
+#define abs(x) ((x) < 0) ? -(x) : (x)
 
 typedef long long int64;
 typedef unsigned long long uint64;
@@ -13,8 +14,9 @@ typedef unsigned uint;
 
 float minang(float a, int b)
 {
-    int x = abs(a - b);
-    return (x <= 180) ? x : 360 - x;
+    float x = a - (float)b;
+    x = abs(x);
+    return (x <= 180) ? x : 360.f - x;
 }
 
 int main() {
@@ -35,7 +37,7 @@ int main() {
         degm = m * 360 / 60;
         degh = h * 360 / 12;
         
-        degh += m * (360 / 12) / 60;
+        degh += m * .5f;
 
         cout << fixed << minang(degh, degm) << endl;
     }
