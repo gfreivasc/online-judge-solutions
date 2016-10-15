@@ -1,7 +1,14 @@
 // Source by Gabriel Vasconcelos
 // Pay me 10$ per use or satan will curse your soul.
 
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <queue>
+#include <stack>
+#include <map>
+
 using namespace std;
 #define endl '\n'
 #define min(x, y) ((x) < (y)) ? (x) : (y)
