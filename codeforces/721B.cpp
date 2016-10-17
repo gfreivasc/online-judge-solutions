@@ -23,7 +23,33 @@ typedef unsigned uint;
 int main() {
     ios_base::sync_with_stdio(false);
 
-    // Code here
-    
+    vector<string> pwds;
+    string correct;
+    uint n, k, pwdl;
+    uint low, lsame;
+
+    cin >> n >> k;
+
+    for (int i = 0; i < n; ++i)
+    {
+        cin >> correct;
+        pwds.push_back(correct);
+    }
+
+    cin >> correct;
+
+    pwdl = correct.length();
+
+    low = lsame = 0;
+    for (auto& pwd : pwds)
+    {
+        if (pwd.length() < pwdl) low++;
+        else if (pwd.length() == pwdl) lsame++;
+    }
+
+    lsame += low;
+    cout << low + (low / k) * 5 + 1 << ' ';
+    cout << lsame + ((lsame - 1) / k) * 5;
+
     return 0;
 }
