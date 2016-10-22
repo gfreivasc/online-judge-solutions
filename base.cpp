@@ -3,18 +3,17 @@
 
 #include <algorithm>
 #include <iostream>
+#include <bitset>
 #include <string>
 #include <vector>
+#include <cmath>
 #include <queue>
 #include <stack>
 #include <map>
 #include <set>
-
 using namespace std;
+
 #define endl '\n'
-#define min(x, y) ((x) < (y)) ? (x) : (y)
-#define max(x, y) ((x) > (y)) ? (x) : (y)
-#define abs(x) ((x) < 0) ? -(x) : (x)
 
 typedef long long int64;
 typedef unsigned long long uint64;
